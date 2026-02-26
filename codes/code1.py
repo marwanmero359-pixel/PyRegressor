@@ -1,4 +1,4 @@
-%Imports
+#Imports
   
 import numpy as np
 import pandas as pd
@@ -7,7 +7,7 @@ import seaborn as sns
 
 from sklearn.model_selection import train_test_split
 
-%load data
+#load data
 
 mat = pd.read_csv("../data/student-mat.csv", sep=";")
 por = pd.read_csv("../data/student-por.csv", sep=";")
@@ -17,20 +17,20 @@ por["subject"] = "portuguese"
 
 datasets = {"Math": mat, "Portuguese": por}
 
-%train/test split
+#train/test split
 
 def split_df(df, test_size=0.30, random_state=1):
     train_df, test_df = train_test_split(df, test_size=test_size, random_state=random_state)
     return train_df, test_df
 
-%%Summary Tables
+#summary Tables
 
 for name, df in datasets.items():
     print("\n", "="*30, name, "="*30)
     print(df.info())
     print(df.describe())
 
-%%Plots
+#Plots
 
 def plot_g3_hist(df, title_suffix=""):
     plt.figure(figsize=(6,4))
@@ -82,7 +82,7 @@ def plot_internet_violin(df, title_suffix=""):
     plt.show()
 
 
-%%plot per dataset
+#plot per dataset
 
 for name, df in datasets.items():
     plot_g3_hist(df, f"({name})")
