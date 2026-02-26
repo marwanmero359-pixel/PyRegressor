@@ -43,4 +43,5 @@ i loaded data but its this code isnt working . help me fix it .
 
 11.is standarisation needed for my linear regressor ? 
 
+12. help me write readme.md for this respo . (photo of main branch attached )
 
