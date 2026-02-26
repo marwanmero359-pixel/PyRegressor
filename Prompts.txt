@@ -1,0 +1,46 @@
+1.how do i  load two different data sets (portugues and math subjects) containing same features together ? 
+
+2.
+finalscore = data['G3']
+data = data.drop(columns = ['G3'])
+from sklearn.preprocessing import (
+MinMaxScaler,
+StandardScaler,
+)
+standard_scaler = StandardScaler().set_output(transform="pandas")
+data_standardized = standard_scaler.fit_transform(data)
+minmax_scaler = MinMaxScaler().set_output(transform="pandas")
+data_normalized = minmax_scaler.fit_transform(data)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+/tmp/ipython-input-327/1613464528.py in <cell line: 0>()
+----> 1 finalscore = data['G3']
+      2 data = data.drop(columns = ['G3'])
+      3 from sklearn.preprocessing import (
+      4 MinMaxScaler,
+      5 StandardScaler,
+
+NameError: name 'data' is not defined 
+
+i loaded data but its this code isnt working . help me fix it . 
+
+
+3.how do i correctly read the results of this image ? (correlationmatrix.png) 
+
+4.whats the difference between confustion matrix and corelation matrix ? 
+
+5.how do i describe grid search and cross validation in a report?
+
+6.whats the difference between r^2 and rmse in regression ?
+
+7.my MLP regressor is taking more than 15 mins is that normal ? (pic of mlp code was attached ) 
+
+8.how do i know if  those results are correct ? (pic of mlp r^2 and rmse scores) 
+
+9.can you rewrite my methodology section in a more academic tone (mlp.py and linerregressor.py were attached) 
+
+10.why is my MLP not improving after increasing max_iter? 
+
+11.is standarisation needed for my linear regressor ? 
+
+
